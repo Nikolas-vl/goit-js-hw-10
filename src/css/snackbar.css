@@ -1,0 +1,28 @@
+.form button {
+  margin-top: 10px;
+  min-width: 320px;
+  text-align: center;
+}
+
+.form label:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+input[name='delay'] {
+  padding-left: 8px;
+  min-height: 30px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[name='delay']:focus {
+  border-color: rgb(81, 162, 224);
+  outline: none;
+  border-radius: 2px;
+}
+
+fieldset {
+  margin: 0;
+}

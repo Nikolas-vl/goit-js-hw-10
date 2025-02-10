@@ -1,0 +1,28 @@
+.main-title {
+  margin-bottom: 15px;
+}
+.back-link {
+  margin-top: 20px;
+}
+
+#datetime-picker {
+  padding-top: 3px;
+}
+.timer {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+}
+.value {
+  font-size: 30px;
+  text-align: center;
+}
+.label {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
