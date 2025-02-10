@@ -24,7 +24,6 @@ form.addEventListener('submit', e => {
       }, delay);
     });
 
-    // Опрацьовуємо проміс
     promise
       .then(() => {
         iziToast.success({
@@ -42,5 +41,7 @@ form.addEventListener('submit', e => {
           icon: false,
         });
       });
+
+    form.reset();
   }
 });
