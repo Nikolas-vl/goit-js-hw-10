@@ -5,6 +5,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import errorIcon from '../img/erro.svg';
 
+const timeInput = document.querySelector('#datetime-picker');
 const button = document.querySelector('[data-start]');
 const days = document.querySelector('[data-days]');
 const hours = document.querySelector('[data-hours]');
@@ -12,6 +13,7 @@ const minutes = document.querySelector('[data-minutes]');
 const seconds = document.querySelector('[data-seconds]');
 
 button.disabled = true;
+timeInput.disabled = false;
 
 const options = {
   enableTime: true,
@@ -40,7 +42,7 @@ const options = {
   },
 };
 
-flatpickr('#datetime-picker', options);
+flatpickr(timeInput, options);
 
 let userSelectedDate = null;
 
@@ -77,6 +79,7 @@ const timer = {
       this.tick();
     }, 1000);
     button.disabled = true;
+    timeInput.disabled = true;
   },
 
   tick() {
@@ -91,6 +94,7 @@ const timer = {
     if (ms < 1000) {
       clearInterval(this.intervalId);
       button.disabled = false;
+      timeInput.disabled = false;
     }
   },
 };
